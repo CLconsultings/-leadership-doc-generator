@@ -54,6 +54,19 @@ in future output.
 
 ### Deck entries
 
+### 2026-07-29: convert the .potx content type when saving as .pptx
+- Context: delivering decks built from the `.potx` template by chrome inheritance.
+- Failed behavior: the deck kept the template content type
+  (`presentationml.template.main+xml`) for `/ppt/presentation.xml`, so PowerPoint refused to
+  open the `.pptx` ("PowerPoint can't read ..."). LibreOffice and the XSD validator accepted
+  it, so it passed automated checks.
+- Required behavior: when saving a `.potx`-derived deck as `.pptx`, change that Override to
+  `presentationml.presentation.main+xml`, and confirm the file opens with a PowerPoint-like
+  parser (python-pptx), not only the XSD validator.
+- Generalized lesson: validate against a PowerPoint-faithful parser before delivery; XSD and
+  LibreOffice tolerance is not proof PowerPoint will open the file.
+- Status: active
+
 ### 2026-07-29: use the real brand, not draft-deck chrome
 - Context: producing a Managers in Motion deck.
 - Failed behavior: an early version inherited chrome from a circulating program deck that

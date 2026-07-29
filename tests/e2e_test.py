@@ -86,6 +86,23 @@ def check_system():
 def check_deck(path, tpal):
     print(f"## Deck: {os.path.basename(path)}")
     z = zipfile.ZipFile(path)
+    # A .pptx that still carries the .potx template content type is unreadable in
+    # PowerPoint even though LibreOffice and the XSD accept it. Catch it here.
+    ct = z.read("[Content_Types].xml").decode("utf8", "ignore")
+    if path.lower().endswith(".pptx") and "presentationml.template.main+xml" in ct:
+        err("deck declares TEMPLATE content type but is named .pptx -> "
+            "PowerPoint will refuse to open it (change ppt/presentation.xml Override "
+            "to presentationml.presentation.main+xml)")
+    else:
+        ok("presentation content type matches .pptx")
+    try:
+        import importlib
+        Presentation = importlib.import_module("pptx").Presentation
+        Presentation(path); ok("opens with python-pptx (PowerPoint-like parser)")
+    except ImportError:
+        pass
+    except Exception as e:
+        err(f"python-pptx cannot open deck: {str(e)[:90]}")
     slide_names = sorted([n for n in z.namelist() if re.search(r'ppt/slides/slide\d+\.xml$', n)])
     slides = {n: z.read(n).decode("utf8", "ignore") for n in slide_names}
     allx = "".join(slides.values())

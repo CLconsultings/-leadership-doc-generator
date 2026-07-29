@@ -1,33 +1,39 @@
 # Deck Builder assets
 
-## Required: Leadership-Link_Deck_Template.potx
+## Leadership-Link_Deck_Template.potx (present)
 
-The Deck Builder workflow opens the approved PowerPoint template at:
+The approved Leadership-Link template is here:
 
 ```
 assets/Leadership-Link_Deck_Template.potx
 ```
 
-This template is the source of the Leadership-Link layout system, logo variants, visual
-assets, headshot, QR assets, and presentation structure.
+It is the authoritative brand asset, supplied by Leadership-Link (it ships with Eileen's
+operating profile). It carries:
 
-**This file is intentionally not committed here and must be supplied by
-Leadership-Link.** It is a proprietary brand asset and is not reconstructed from memory.
-Recreating the brand by hand would violate the fidelity rules the Skill exists to
-enforce, so the template is treated as a required, authoritative input rather than
-something the Skill generates.
+- 23 layouts: title, agenda, section header, numbered section divider, content-with-icon,
+  two-column comparison, text+visual, three-up cards, five-item row, process/sequence
+  flow, stat/hero, single-stat, big-quote, and closing/recap.
+- The standard workshop slides: Mission, Ground Rules, Big Idea, Three Keys, the three key
+  section breaks, Action Commitment, and Thank You.
+- Embedded brand media: the Leadership-Link logo (full color and white knockout), Eileen's
+  headshot, the LinkedIn QR, and the icon-in-circle assets.
+- Tahoma type, the Navy `#0A1F44` / Orange `#F2541B` / Gold `#D4AF37` / Lime `#A6CE39`
+  palette, and the `Leadership-Link | Eileen Habelow, PhD` footer.
 
-### To make the Deck Builder fully operational
+## How to use it
 
-Place the approved `Leadership-Link_Deck_Template.potx` in this `assets/` directory.
+Build by **chrome inheritance**: duplicate the template slide whose layout fits the beat,
+then replace only its text. This preserves the brand chrome exactly and is the required
+method (see the operating profile and the Corrections Log). Every template slide's speaker
+notes name its layout and how to use it.
 
-### When the template is absent
+Reuse the embedded logo, headshot, and QR from the template rather than regenerating them,
+unless the source asset itself changes.
 
-If the template is not present, the Deck Builder must stop before producing branded
-slides and report, per its refusal and escalation behavior:
+## If the template is ever absent
 
-1. what is verified;
-2. what remains unknown;
-3. which source is required (this template);
-4. what can safely be produced now (for example, an outline, narrative structure, and
-   speaker-note drafting that do not depend on the brand assets).
+Stop before producing branded slides and report, per the refusal and escalation behavior:
+what is verified; what remains unknown; that this template is the required source; and what
+can safely be produced now (outline, narrative, speaker-note drafts) without the brand
+assets. Do not reconstruct the brand from memory.

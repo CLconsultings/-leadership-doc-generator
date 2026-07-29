@@ -6,11 +6,33 @@ merge, simplify, reinterpret, or extend any of them. When a detail below is not
 sufficient for the task, follow the missing-detail procedure in `SKILL.md` rather than
 filling the gap yourself.
 
+The authoritative list of programs and models is in Eileen's operating profile
+(`skills/eileen-operating-profile/SKILL.md`), under "Proprietary Frameworks and
+Programs." That profile is the source of truth; this file expands the ones this skill
+uses most. If the two disagree, the profile wins.
+
 ## Table of contents
 
+- Flagship programs
 - Managers in Motion (four-block sequence)
-- Other registered frameworks
+- Proprietary models
 - External frameworks (attribution rule)
+
+## Flagship programs
+
+Treat these as owned intellectual property. Never reinterpret, rename, or paraphrase the
+models without permission.
+
+- **Leaders in Motion** — flagship leadership development program, six modules, layered
+  models. The book *Leaders in Motion* does not yet align to the program; treat them as
+  separate IP for now.
+- **Managers in Motion** — four-block manager training system (see below).
+- **Teams in Motion** — team effectiveness program; targets good-to-great teams, not
+  dysfunctional ones, so calibrate language accordingly. Live and asynchronous
+  (LearnWorlds) formats. The async version uses a LEARN-CONNECT-COMMIT three-phase
+  framework, two weeks per module over ten weeks, with a team-leader track running
+  slightly ahead of the team; Phase 2 access is gated behind 100% Phase 1 completion.
+- **Ask AI-Leen** — AI coaching tool with a T1-T3 scaffold and adaptive logic.
 
 ## Managers in Motion
 
@@ -98,33 +120,33 @@ Supportable application outputs:
 - assess how the team interprets the manager's behavior during decisions or change
 - select one program behavior to strengthen during the next month
 
-## Other registered frameworks
+## Proprietary models
 
-Preserve the approved language and structure for each of these. Where the approved
-definition, sequence, or dimensions are not available in the connected materials, use
-`[VERIFY: specific missing detail]` rather than reconstructing them from memory.
+Owned Leadership-Link models. Preserve the approved language and structure for each. Where
+the approved definition, sequence, or dimensions are not available in the connected
+materials, use `[VERIFY: specific missing detail]` rather than reconstructing them from
+memory.
 
-- Leaders in Motion
-- Teams in Motion
-- Ask AI-Leen
 - IOI (Intent-Observation-Impact)
-- IOIC+A
+- IOIC+A (difficult conversations model)
 - Provide versus Guide
 - Motivation x Difficulty
 - Competence x Confidence
 - Control, Influence, and Everything Else
-- Three-Dimension Ownership Clarity
-- DiSC
-- SCARF
-- 70-20-10
-- Korn Ferry FYI
-- Bridges' Transitions
-- Who's Got the Monkey?
+- Three-Dimension Ownership Clarity (used in *Leaders in Motion* Chapter 14)
 
 ## External frameworks
 
-Several items above originate outside Leadership-Link (for example DiSC, SCARF,
-70-20-10, Korn Ferry FYI, Bridges' Transitions, and Who's Got the Monkey?).
-Leadership-Link applies them, but they are not proprietary Leadership-Link models.
-Never present an external framework as a Leadership-Link creation, and never present a
-proprietary Leadership-Link framework as generic public material.
+Eileen uses these regularly, but they originate outside Leadership-Link. Apply them; never
+present them as proprietary Leadership-Link models, and never present a proprietary
+Leadership-Link framework as generic public material.
+
+- DiSC — specifically **Wiley Everything DiSC**, the house style and primary behavioral
+  model
+- SCARF (NeuroLeadership Institute)
+- 70-20-10 learning model
+- Korn Ferry FYI competency framework
+- Bridges' Transitions (Endings, Neutral Zone, New Beginnings; used in change work)
+- Neural coupling and information gap theory (applied in program design)
+- Lovallo and Sibony decision-making research (McKinsey)
+- Who's Got the Monkey? (HBR; referenced in the book)

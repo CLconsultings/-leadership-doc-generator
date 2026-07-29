@@ -18,16 +18,20 @@ The production layer for Leadership-Link presentations. It turns approved conten
 editable, on-brand, presentation-ready slides. It does not decide what the content
 should say; that is the job of `eileen-intelligence`.
 
+The authoritative brand, voice, and framework source is Eileen's operating profile
+(`skills/eileen-operating-profile/SKILL.md`). Load it too. Where any detail here disagrees
+with the profile, the profile wins.
+
 ## When this skill applies
 
 Use it for Leadership-Link presentations, workshops, facilitator decks, executive
 briefings, learning materials, and presentation exports.
 
-On every Leadership-Link deck, also load `eileen-intelligence`. That skill owns the
-thinking, language, framework use, and coaching posture. This skill owns presentation
-architecture, the visual system, production mechanics, validation, and export. Get the
-content right first, then produce it; do not let production polish paper over a
-framework or reasoning error.
+On every Leadership-Link deck, also load `eileen-intelligence` and
+`eileen-operating-profile`. Those own the thinking, language, framework use, voice, and
+coaching posture. This skill owns presentation architecture, the visual system, production
+mechanics, validation, and export. Get the content right first, then produce it; do not
+let production polish paper over a framework or reasoning error.
 
 The mechanics of building `.pptx`/`.potx` files (opening the template, editing slides,
 speaker notes, export) are handled by the `pptx` skill. Load it for the file-level work
@@ -53,39 +57,44 @@ Refusal and escalation).
 
 ### 3. Open the approved template
 
-Use `assets/Leadership-Link_Deck_Template.potx`. The approved template carries the
-Leadership-Link layout system, logo variants, visual assets, headshot, QR assets, and
-presentation structure. Do not recreate the brand from memory when the template is
-available. If the template file is not present in `assets/`, see
-`assets/README.md` and stop before producing branded slides rather than reconstructing
-the brand yourself.
+Use `assets/Leadership-Link_Deck_Template.potx` (present in this skill). It carries the
+Leadership-Link layout system (23 layouts, including the standard workshop slides), the
+logo variants, Eileen's headshot, the LinkedIn QR, and the icon-in-circle motif. Do not
+recreate the brand from memory when the template is available. Build by **chrome
+inheritance**: duplicate an existing branded template slide and replace only its text, so
+the header, footer, colors, and layout are preserved. Never rebuild a branded slide from
+scratch when the chrome exists (Corrections Log). If the template were ever missing, stop
+before producing branded slides rather than reconstructing the brand yourself.
 
 ### 4. Build the narrative
 
-Use a presentation sequence, not a document split into pages:
+Workshop decks follow the standard skeleton (see the operating profile): Mission → Ground
+Rules → Big Idea → Three Keys → (key section breaks and content) → Action Commitment →
+Thank You. For programs whose architecture is not three keys (for example Managers in
+Motion, a four-block system), adapt the skeleton to the program's real structure using the
+template's numbered section dividers, and say what you adapted.
 
-1. context or tension
-2. why it matters
-3. framework or concept
-4. practical application
-5. participant or leader action
-6. reinforcement or next step
-
-Give each slide one primary job. If a slide is doing two jobs, split it.
+Within that skeleton, sequence content as: context or tension; why it matters; framework
+or concept; practical application; participant or leader action; reinforcement or next
+step. Give each slide one primary job (one idea per slide). If a slide is doing two jobs,
+split it.
 
 ### 5. Produce editable slides
 
-Use native editable PowerPoint objects wherever possible. Do not flatten complete
-slides into images. Preserve editable text, editable shapes, usable speaker notes,
-template layouts, consistent masters, and export compatibility. An editable deck is the
-deliverable; a picture of a deck is not.
+Use native editable PowerPoint objects only. Never flatten a slide into a single image;
+every element must be individually selectable, movable, and retypeable. Preserve editable
+text, editable shapes, usable speaker notes, template layouts, and consistent masters.
+Keep visuals-first: few words on the slide face, the presenter carries the words.
 
 ### 6. Write speaker notes
 
-Speaker notes must add value beyond the slide, never repeat it verbatim. Include, where
-relevant, facilitator intent, transition language, discussion prompts, an explanation of
-the model, timing guidance, likely participant reactions, application instructions, and
-caution points.
+Every slide ships with speaker notes, without being asked; a deck with empty notes is a
+defect. The slide face stays sparse and the notes carry what the presenter would actually
+say to that slide: the narration, the point being made, and the transition into the next
+slide. Add value beyond the slide, never repeat it verbatim. Include, where relevant,
+facilitator intent, transition language, discussion prompts, an explanation of the model,
+timing guidance, likely participant reactions, application instructions, and caution
+points. Bracketed asides mark presenter guidance not read aloud.
 
 ### 7. Validate the deck
 
@@ -100,19 +109,25 @@ the primary source file.
 ## Brand and visual system
 
 Use the approved Leadership-Link visual system. The full specification (colors,
-typography, sizing, footer, and visual standards) is in `references/brand-system.md`.
-Load it whenever you make a visual decision. Key points:
+typography, sizing, footer, layout system, and visual standards) is in
+`references/brand-system.md`, which mirrors the operating profile. Load it whenever you
+make a visual decision. Key points:
 
-- Core colors include Navy `#1C1E43`, Orange `#ED8344`, Grey `#999999`, Light blue
-  `#BAD3E9`, Purple `#5D386C`, Green `#9BBB59`. Where the current approved template uses
-  later signal colors, preserve the template rather than substituting values by hand.
-- Typography: Merriweather where the template and brand standards require it, sentence
-  case, no decorative or generic technology fonts.
-- Body content is minimum 18 pt. The 11 pt exception is only for muted, non-substantive
+- Core colors: Navy `#0A1F44` (dominant, 60-70% of visual weight), Orange `#F2541B`
+  (accent), Gold `#D4AF37` (secondary accent), Lime `#A6CE39` (sparingly). Never give the
+  four equal weight. Prefer the template's own values over hand-substituting.
+- Typography: **Tahoma** across all deliverables, sentence case. Not Merriweather, not a
+  decorative or generic technology font.
+- PowerPoint has an 18 pt floor: nothing below 18 pt except a footnote or source citation.
+  If text will not fit at 18 pt, cut words, do not shrink type. Elsewhere (Word, PDF,
+  footers) the floor is 10 pt. The 11 pt exception is only for muted, non-substantive
   structural labels, never for body copy, instructions, evidence, model definitions, or
   participant actions.
-- Footer: `Leadership-Link | Ask AI-Leen`, and where required, `powered by
-  know2grow.com`. Preserve approved logo and capitalization treatments.
+- Footer: `Leadership-Link | Eileen Habelow, PhD`. Preserve the approved logo and
+  capitalization treatments; use the white-knockout logo on navy, the full-color logo on
+  light.
+- Dark/light sandwich, cards not bars (never edge stripes or under-title rules), and the
+  icon-in-circle motif on every content slide.
 
 One central message per slide, real whitespace, clear hierarchy, restrained emphasis,
 and diagrams only when they teach something. Avoid generic corporate AI imagery,
@@ -143,12 +158,13 @@ fabrication.
 
 ## Final pre-delivery check
 
-Confirm the correct skills were applied (this one plus `eileen-intelligence`), the
-output mode was identified, only relevant references were loaded, Eileen's judgment
-appears before stylistic imitation, framework names and structures are exact, no
-proprietary content was invented, fact and inference are distinguishable,
-confidentiality is preserved, the approved template was used, slides remain editable,
-body text meets minimum sizing, the 11 pt exception was used only for muted structural
-labels, speaker notes add value, the Corrections Log was applied internally, and the
-output meets the "What Great Looks Like" standard. Revise before delivery if any item
-fails.
+Confirm the correct skills were applied (this one plus `eileen-intelligence` and
+`eileen-operating-profile`), the output mode was identified, only relevant references were
+loaded, Eileen's judgment appears before stylistic imitation, framework names and
+structures are exact, no proprietary content was invented, fact and inference are
+distinguishable, confidentiality is preserved, the approved template was used via chrome
+inheritance, slides remain editable native objects, the deck is Tahoma on the real palette
+with the `Leadership-Link | Eileen Habelow, PhD` footer, body text meets the 18 pt floor,
+the 11 pt exception was used only for muted structural labels, every slide has speaker
+notes, the Corrections Log was applied internally, and the output meets the "What Great
+Looks Like" standard. Revise before delivery if any item fails.

@@ -106,13 +106,19 @@ failure before delivering; do not ship a known failure with a note.
 Provide the requested native and presentation formats. Keep the editable PowerPoint as
 the primary source file.
 
-The template is a `.potx`, so a deck built from it inherits the template content type. When
-saving the deck as `.pptx`, change the `/ppt/presentation.xml` Override in
-`[Content_Types].xml` from `...presentationml.template.main+xml` to
-`...presentationml.presentation.main+xml`. A `.pptx` that keeps the template content type
+The template is a `.potx`, so a deck built from it inherits the template content type. Pack
+the finished deck with `scripts/pack_pptx.py`, which rewrites the `/ppt/presentation.xml`
+Override from `...presentationml.template.main+xml` to
+`...presentationml.presentation.main+xml` and verifies the result opens with python-pptx:
+
+```
+python scripts/pack_pptx.py <unpacked_dir> <output.pptx>
+```
+
+Do not hand-zip a template-derived deck. A `.pptx` that keeps the template content type
 opens in LibreOffice and passes the XSD but PowerPoint refuses it ("PowerPoint can't read").
-Confirm the deck opens with a PowerPoint-like parser (for example python-pptx) before
-delivery, not only the XSD validator.
+Always confirm the deck opens with a PowerPoint-like parser (python-pptx) before delivery,
+not only the XSD validator.
 
 ## Brand and visual system
 

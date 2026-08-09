@@ -54,6 +54,14 @@ in future output.
 
 ### Deck entries
 
+### 2026-08-09: Know2Grow is now Leadership-Link On-Demand (LLOD)
+- Context: brand references in decks and materials.
+- Required behavior: use "Leadership-Link On-Demand" (LLOD) for the on-demand and
+  off-the-shelf product line; never use the retired "Know2Grow" name. Ask AI-Leen is an
+  LLOD tool. The `know2grow` token stays in the test's off-brand guard list so it is
+  flagged if it reappears.
+- Status: active
+
 ### 2026-07-29: convert the .potx content type when saving as .pptx
 - Context: delivering decks built from the `.potx` template by chrome inheritance.
 - Failed behavior: the deck kept the template content type

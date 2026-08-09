@@ -21,6 +21,20 @@ operating profile). It carries:
 - Tahoma type, the Navy `#0A1F44` / Orange `#F2541B` / Gold `#D4AF37` / Lime `#A6CE39`
   palette, and the `Leadership-Link | Eileen Habelow, PhD` footer.
 
+## Leadership-Link_Deck_Kit.pptx (present)
+
+A ready-to-use starter kit of the reusable slides, premade and on-brand:
+
+- Fixed, ready-to-use slides: Mission, Ground Rules, Thank You / contact.
+- Customizable building blocks with the swap-in parts marked in guillemets («...»):
+  Cover, Big Idea, Overview/Agenda, Section Divider, Content, Practice.
+- A "How to use this kit" instruction slide (delete it from any delivered deck).
+
+Eileen (or a facilitator) opens the kit, copies the slide whose layout fits the beat into
+a working deck, and edits only the marked parts. Speaker notes on every slide say what to
+change and what to leave. It is the fastest way to assemble a new deck without the full
+build workflow.
+
 ## How to use it
 
 Build by **chrome inheritance**: duplicate the template slide whose layout fits the beat,

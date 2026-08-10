@@ -111,7 +111,7 @@
 
   /* real brand assets */
   .logo{position:absolute; height:5cqw; width:auto; z-index:3}
-  .logo.tl{top:5.4cqw; left:7cqw} .logo.tc{top:5.4cqw; left:50%; transform:translateX(-50%)}
+  .logo.tl{top:5.4cqw; left:7cqw} .logo.tc{top:5.4cqw; left:50%; transform:translateX(-50%)} .logo.tr{top:5.4cqw; right:7cqw}
   .headshot{border-radius:50%; object-fit:cover; box-shadow:0 0 0 .8cqw var(--gold)}
   .qrbox{display:flex; flex-direction:column; align-items:center; gap:1cqw}
   .qrimg{background:#fff; border-radius:1cqw; display:block}
@@ -249,8 +249,8 @@ function bTitle(st){const p=P[S.program];
   if(st==="b") return {cls:"s-dark", inner:`<img class="logo tc" src="${ASSET_LOGO}" alt="Leadership-Link"><div class="fill center">${ic(p.icons[0],"ic-lg")}<p class="eyebrow" style="margin-top:3cqw">${esc(p.kind)}</p><h2 class="title" style="max-width:88%">${esc(p.name)}</h2><hr class="rule mid" style="margin-top:2.4cqw"><p class="subtitle">${esc(S.subtitle)}</p></div>`};
   return {cls:"s-dark", inner:`<img class="logo tl" src="${ASSET_LOGO}" alt="Leadership-Link"><div class="fill"><p class="eyebrow">${esc(p.kind)}</p><hr class="rule"><h2 class="title">${esc(p.name)}</h2><p class="subtitle">${esc(S.subtitle)}</p></div>`};}
 function bMission(st){
-  if(st==="b") return {cls:"s-dark", inner:`<div class="fill center">${ic("target","ic-lg")}<p class="eyebrow" style="margin-top:3cqw">Our Mission</p><p class="big" style="max-width:88%">${esc(MISSION)}</p><hr class="rule mid" style="margin-top:2.6cqw"></div>`};
-  return {cls:"s-dark", inner:`<div class="lead">${ic("target","ic-lg")}<div class="txt"><p class="eyebrow">Our Mission</p><hr class="rule"><p class="big">${esc(MISSION)}</p></div></div>`};}
+  if(st==="b") return {cls:"s-dark", inner:`<img class="logo tr" src="${ASSET_LOGO}" alt="Leadership-Link"><div class="fill center">${ic("target","ic-lg")}<p class="eyebrow" style="margin-top:3cqw">Our Mission</p><p class="big" style="max-width:88%">${esc(MISSION)}</p><hr class="rule mid" style="margin-top:2.6cqw"></div>`};
+  return {cls:"s-dark", inner:`<img class="logo tr" src="${ASSET_LOGO}" alt="Leadership-Link"><div class="lead">${ic("target","ic-lg")}<div class="txt"><p class="eyebrow">Our Mission</p><hr class="rule"><p class="big">${esc(MISSION)}</p></div></div>`};}
 function bBig(st){
   if(st==="b") return {cls:"s-dark", inner:`<div class="fill center"><p class="quote">&ldquo;</p><p class="big" style="max-width:88%">${esc(S.bigIdea)}</p><hr class="rule mid" style="margin-top:2.6cqw"><p class="eyebrow">The Big Idea</p></div>`};
   return {cls:"s-dark", inner:`<div class="lead">${ic("bulb","ic-lg")}<div class="txt"><p class="eyebrow">The Big Idea</p><hr class="rule"><p class="big">${esc(S.bigIdea)}</p></div></div>`};}
@@ -261,8 +261,8 @@ function bOverview(st,title){const p=P[S.program];const many=S.items.length>4;
   if(st==="b") return {cls:"s-light", inner:`<h3 class="h-head">${esc(title)}</h3><p class="h-sub">The ${p.unit.toLowerCase()}s of ${esc(p.name)}</p><div class="orows ${many?"c6":""}">${S.items.map((t,k)=>`<div class="orow"><span class="orn">${k+1}</span>${ic(p.icons[k]||"target","ic-sm")}<span class="ort">${esc(t)}</span></div>`).join("")}</div>`};
   return {cls:"s-light", inner:`<h3 class="h-head">${esc(title)}</h3><p class="h-sub">The ${p.unit.toLowerCase()}s of ${esc(p.name)}</p><div class="ocards ${many?"c6":"c4"}">${S.items.map((t,k)=>`<div class="ocard">${ic(p.icons[k]||"target","ic-md")}<div><span class="ok">${esc(p.unit)} ${String(k+1).padStart(2,"0")}</span><span class="on">${esc(t)}</span></div></div>`).join("")}</div>`};}
 function bDivider(st){const p=P[S.program];
-  if(st==="b") return {cls:"s-dark", inner:`<div class="divb"><span class="ghostnum">01</span><div class="z">${ic(p.icons[0]||"target","ic-md")}<p class="eyebrow" style="margin-top:2.4cqw">${esc(p.unit)} 01</p><p class="divtitle">${esc(S.items[0])}</p></div></div>`};
-  return {cls:"s-dark", inner:`<div class="divwrap">${ic(p.icons[0]||"target","ic-md")}<span class="divnum">01</span><p class="divtitle">${esc(S.items[0])}</p></div>`};}
+  if(st==="b") return {cls:"s-dark", inner:`<img class="logo tr" src="${ASSET_LOGO}" alt="Leadership-Link"><div class="divb"><span class="ghostnum">01</span><div class="z">${ic(p.icons[0]||"target","ic-md")}<p class="eyebrow" style="margin-top:2.4cqw">${esc(p.unit)} 01</p><p class="divtitle">${esc(S.items[0])}</p></div></div>`};
+  return {cls:"s-dark", inner:`<img class="logo tr" src="${ASSET_LOGO}" alt="Leadership-Link"><div class="divwrap">${ic(p.icons[0]||"target","ic-md")}<span class="divnum">01</span><p class="divtitle">${esc(S.items[0])}</p></div>`};}
 function bContent(st){const p=P[S.program];const sp=S.spot;
   if(st==="b") return {cls:"s-light", inner:`<div class="fill center"><p class="lbl">${esc(sp.label)}</p>${ic(p.icons[0]||"target","ic-lg")}<p class="pt" style="max-width:88%;margin-top:2.4cqw">${esc(sp.headline)}</p><p class="mid">${esc(sp.point)}</p><p class="sp">${esc(sp.support)}</p></div>`};
   return {cls:"s-light", inner:`<div class="content">${ic(p.icons[0]||"target","ic-xl")}<div><p class="lbl">${esc(sp.label)}</p><p class="pt">${esc(sp.headline)}</p><p class="mid">${esc(sp.point)}</p><p class="sp">${esc(sp.support)}</p></div></div>`};}

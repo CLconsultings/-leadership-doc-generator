@@ -36,3 +36,15 @@ masters, logo, headshot, QR), packs it with the correct presentation content typ
 verifies it opens with python-pptx. Handles any number of overview items (4 blocks/moves
 or 6 modules). This is the template-accurate export path — higher fidelity than an
 in-browser rebuild, and verified before delivery.
+
+
+## test_deck_generator.js
+
+Interaction regression test for the generator's controls (requires jsdom: `npm install
+jsdom`). Loads `deck-generator.html`, runs its script in a real DOM, and clicks every
+control — program select, Design Option 1/2, per-slide A/B, Reset, Download settings,
+Print — asserting each does what it should.
+
+```
+npm install jsdom && node tools/test_deck_generator.js
+```

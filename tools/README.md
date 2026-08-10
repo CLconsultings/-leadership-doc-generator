@@ -19,3 +19,20 @@ file in any browser — no build, no dependencies, no network.
 Fidelity: Managers, Teams, and Senior Leaders presets carry verified content; Leaders in
 Motion ships as «placeholders» because its six-module curriculum is not yet verified —
 fill those before delivering. Know2Grow is retired; the tool uses LLOD only.
+
+
+## build_deck_from_spec.py
+
+Turns the generator's exported settings into an **editable PowerPoint on the real
+template**. In the generator, click **Download settings** to get `deck-settings.json`,
+then:
+
+```
+python tools/build_deck_from_spec.py deck-settings.json out.pptx
+```
+
+It builds the deck by chrome inheritance on `Leadership-Link_Deck_Template.potx` (real
+masters, logo, headshot, QR), packs it with the correct presentation content type, and
+verifies it opens with python-pptx. Handles any number of overview items (4 blocks/moves
+or 6 modules). This is the template-accurate export path — higher fidelity than an
+in-browser rebuild, and verified before delivery.

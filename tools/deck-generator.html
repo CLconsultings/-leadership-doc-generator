@@ -139,6 +139,7 @@
     <div class="brandmark"><span id="wm-arc"></span><span>Leadership-Link</span></div>
     <div><h1>Deck Generator</h1><span class="sub">on-brand slides — two designs per slide, real assets, print to PDF</span></div>
     <div class="spacer"></div>
+    <button class="btn btn-ghost" id="spec">Download settings</button>
     <button class="btn btn-ghost" id="reset">Reset</button>
     <button class="btn btn-primary" id="print">Print / Save as PDF</button>
   </header>
@@ -320,6 +321,7 @@ function init(){
   document.querySelectorAll("#design button").forEach(btn=>btn.addEventListener("click",()=>{document.querySelectorAll("#design button").forEach(b=>b.setAttribute("aria-pressed","false"));btn.setAttribute("aria-pressed","true");setAll(btn.dataset.d);}));
   document.getElementById("reset").addEventListener("click",()=>{S.styles={};document.querySelectorAll("#design button").forEach((b,i)=>b.setAttribute("aria-pressed",i===0?"true":"false"));selectProgram(S.program);});
   document.getElementById("print").addEventListener("click",()=>window.print());
+  document.getElementById("spec").addEventListener("click",()=>{const p=P[S.program];const spec={program:S.program,name:p.name,kind:p.kind,unit:p.unit,subtitle:S.subtitle,bigIdea:S.bigIdea,items:S.items,spot:S.spot,design:styleOf("title")};const blob=new Blob([JSON.stringify(spec,null,2)],{type:"application/json"});const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="deck-settings.json";document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(a.href);});
   document.getElementById("deck").addEventListener("click",e=>{const b=e.target.closest(".dtb");if(!b)return;S.styles[b.dataset.k]=b.dataset.s;render();
     const allSame=["title","mission","ground","big","overview","divider","content","commit","thanks"].every(k=>styleOf(k)===styleOf("title"));
     document.querySelectorAll("#design button").forEach(btn=>btn.setAttribute("aria-pressed", allSame&&btn.dataset.d===styleOf("title")?"true":"false"));});

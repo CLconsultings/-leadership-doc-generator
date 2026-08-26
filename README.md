@@ -9,6 +9,10 @@ Skills**. The profile is the authoritative source of Eileen's voice, brand, fram
 and non-negotiables. The two skills add the structured reasoning and production discipline
 on top of it. They are kept separate on purpose; do not merge the two operating layers.
 
+A separate optional **Red Flag Run** skill provides a cross-cutting authorship and writing-
+quality audit. It can compose with Leadership-Link work without becoming part of Eileen's
+reasoning or proprietary framework layer.
+
 ## Source of truth
 
 ### Eileen Operating Profile (`skills/eileen-operating-profile`)
@@ -56,9 +60,32 @@ briefing, learning material, or presentation export.
 - `assets/Leadership-Link_Deck_Template.potx`: the approved 23-layout template (present),
   with `assets/README.md` explaining chrome-inheritance use.
 
+## Optional cross-cutting Skill
+
+### Red Flag Run (`skills/red-flag-run`)
+
+The authorship-preserving writing audit and editing layer. Use it for Red Flag Runs,
+`/human`, AI-pattern scans, final-copy QA, or edits that must remain recognizably the
+writer's own.
+
+It adds:
+
+- authorship and provenance preservation
+- named-pattern detection without claiming AI authorship
+- the portability test for generic sentences
+- minimum-effective editing
+- specificity and uncertainty protection
+- post-edit evaluation for voice displacement and formulaic cadence
+
+It is not a replacement for Eileen Intelligence. On Leadership-Link work, Eileen
+Intelligence controls judgment, framework fidelity, coaching posture, and approved voice;
+Red Flag Run runs afterward as the writing-quality layer. The adapted concepts from Peter
+Yang's MIT-licensed `no-ai-slop` project are documented in
+`skills/red-flag-run/references/third-party-notice.md`.
+
 ## How they compose
 
-When the deliverable is a Leadership-Link deck, all three apply:
+When the deliverable is a Leadership-Link deck, the three core components apply:
 
 - **Eileen Operating Profile** is the authoritative standard for voice, brand, and
   frameworks.
@@ -67,6 +94,10 @@ When the deliverable is a Leadership-Link deck, all three apply:
 - **Leadership-Link Deck Builder** controls the presentation architecture, visual system,
   production mechanics, validation, and export, building from the approved template by
   chrome inheritance.
+
+When authorship or writing-pattern QA is requested, run **Red Flag Run** after the governing
+content is correct. It may edit language, but it may not override the profile, Eileen
+Intelligence, framework language, evidence rules, or confidentiality controls.
 
 Get the content right first, then produce it. Production polish never substitutes for
 correct reasoning or exact framework language.
@@ -83,16 +114,19 @@ correct reasoning or exact framework language.
   without authorization.
 - An incomplete output that names its source gap is preferable to a complete-looking
   fabrication.
+- Writing cleanup should preserve authorship rather than normalize every draft into the
+  same polished voice.
 
 ## Installing the Skills
 
-Copy each skill directory into a location Claude loads Skills from, for example a project
-`.claude/skills/` directory or a personal Skills directory:
+Copy each required skill directory into a location Claude loads Skills from, for example a
+project `.claude/skills/` directory or a personal Skills directory:
 
 ```
 .claude/skills/eileen-operating-profile
 .claude/skills/eileen-intelligence
 .claude/skills/leadership-link-deck-builder
+.claude/skills/red-flag-run  # optional cross-cutting writing QA
 ```
 
 The Deck Builder is fully operational: the approved `Leadership-Link_Deck_Template.potx` is
